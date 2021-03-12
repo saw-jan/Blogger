@@ -20,7 +20,7 @@ Post.init({
         allowNull: false
     },
     post: {
-        type: DataTypes.STRING,
+        type: DataTypes.STRING(500),
         allowNull: false
     },
     user_id: {
