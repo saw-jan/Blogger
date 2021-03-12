@@ -40,19 +40,19 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form class="signup-form">
+                    <form class="login-form">
                         <div class="mb-3">
                             <label for="email-login" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="email-signup" placeholder="name@example.com" />
+                            <input type="email" class="form-control" id="email-login" placeholder="name@example.com" />
                         </div>
                         <div class="mb-3">
                             <label for="password-login" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="password-signup" placeholder="**********" />
+                            <input type="password" class="form-control" id="password-login" placeholder="**********" />
                         </div>
                         <div class="mb-3">
                             <button type="submit" class="btn btn-primary">Login</button>
-                            <button type="button" class="btn btn-outline-primary me-2" data-bs-dismiss="modal" data-bs-toggle="modal"
-                    data-bs-target="#signupModal">Sign-Up!</button>
+                            <button type="button" class="btn btn-outline-primary me-2" data-bs-dismiss="modal"
+                                data-bs-toggle="modal" data-bs-target="#signupModal">Sign-Up!</button>
                         </div>
                     </form>
                 </div>
@@ -70,7 +70,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form class="signup-form">
+                    <form class="signup-form" method="POST" id="signup-form">
                         <div class="mb-3">
                             <label for="username-signup" class="form-label">Username</label>
                             <input type="text" class="form-control" id="username-signup" placeholder="username" />
@@ -92,14 +92,14 @@
         </div>
     </div>
 
-    {{#if loggedIn}}
-    <script src="../../public/javascript/logout.js"></script>
-    {{else}}
-    <script src="../../public/javascript/login.js"></script>
-    {{/if}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
         crossorigin="anonymous"></script>
+        {{#if loggedIn}}
+    <script src="/javascript/logout.js"></script>
+    {{else}}
+    <script src="/javascript/login.js"></script>
+    {{/if}}
 </body>
 
 </html>
