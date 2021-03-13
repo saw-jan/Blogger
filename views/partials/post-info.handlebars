@@ -6,6 +6,7 @@
   <div class="card-body">
     <h5 class="card-title">{{title}} <span class="fs-6 fw-lighter">by {{user.username}}</span></h5>
     <p class="card-text">{{ post}}</p>
-    <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+    <span>{{comments.length}} {{format_plural "comment" comments.length}}</span>
+    <a href="/post/{{id}}" class="stretched-link"></a>
   </div>
 </div>
