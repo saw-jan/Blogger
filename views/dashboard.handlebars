@@ -19,15 +19,20 @@
 
 {{#if posts.length}}
 <section>
-  <h2>Your Posts</h2>
-  <ol>
+  <h2 class="ms-5">Your Posts</h2>
+  <ul>
     {{#each posts as |post|}}
     <li>
-      {{> post-info post}}
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+      <div class="card m-2">
+        <div class="card-body">
+          {{> post-info post}}
+          <a href="/dashboard/edit/{{post.id}}" class="edit-link btn btn-primary mt-2">Edit post</a>
+        </div>
+      </div>
     </li>
     {{/each}}
-  </ol>
+  </ul>
 </section>
 {{/if}}
+
 <script src="/javascript/add-post.js"></script>
