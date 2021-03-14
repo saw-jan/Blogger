@@ -8,7 +8,7 @@ const sequelize = require("./config/connection");
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 require('dotenv').config();
 const sess = {
-  secret: process.env.SESS_PW,
+  secret: 'Super secret secret',
   cookie: {},
   resave: false,
   saveUninitialized: true,
