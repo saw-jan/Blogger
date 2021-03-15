@@ -13,7 +13,7 @@ if (process.env.JAWSDB_URL) {
     dialect: 'mysql',
     port: 3306
   });
-  console.log(sequelize, 'LOCAL_DB');
+  console.log(sequelize, 'LOCAL_DB is bad');
 }
 
 module.exports = sequelize;
