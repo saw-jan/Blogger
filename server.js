@@ -11,6 +11,7 @@ app.use(session({
   secret: 'Super secret secret',
   cookie: {},
   resave: false,
+  maxAge: Date.now() + (30 * 86400 * 1000),
   saveUninitialized: true,
   store: new SequelizeStore({
     db: sequelize
