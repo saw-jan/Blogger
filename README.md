@@ -2,6 +2,8 @@
 
 ## Description:
 Blogger is a simple app used to make blog posts. Users can sign-up with their email and a username to begin. Users can create, edit and delete their posts, as well as comment on other user's blog posts. When finished, the user can log-out and come back at a later time to update the world on what other fantastic things they've been up to. 
+The deployed app can be found at: 
+https://bens-blogger.herokuapp.com/
 ![alt text](./db/screenshot.png?raw=true)
 
 ## Table of Contents:
