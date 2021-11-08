@@ -4,7 +4,11 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "test:webui": "nightwatch -c tests/acceptance/nightwatch.conf.js -e chrome",
+    "test:webui:selenium": "nightwatch -c tests/acceptance/selenium.conf.js -e chrome",
+    "test:webui:selenium:docker": "nightwatch -c tests/acceptance/selenium-docker.conf.js -e chrome",
+    "start:selenium": "docker run -d -p4444:4444 -p5900:5900 --network=host selenium/standalone-chrome-debug"
   },
   "repository": {
     "type": "git",
@@ -30,5 +34,10 @@
   "bugs": {
     "url": "https://github.com/benwade91/Blogger/issues"
   },
-  "homepage": "https://github.com/benwade91/Blogger#readme"
+  "homepage": "https://github.com/benwade91/Blogger#readme",
+  "devDependencies": {
+    "chromedriver": "^95.0.0",
+    "nightwatch": "^1.7.11",
+    "selenium-server": "^3.141.59"
+  }
 }
