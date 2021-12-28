@@ -1,12 +1,14 @@
 const { Given, When, Then, setDefaultTimeout } = require("@cucumber/cucumber");
+const { SearchPage } = require("../pageObjects/SearchPage");
+
+const searchPage = new SearchPage();
 
 Given("the user has navigated to the google search", async function () {
-  await page.goto("https://google.com");
+  await searchPage.navigate();
 });
 
 When("the user searches for {string}", async function (searchTerm) {
-  await page.fill("input[name='q']", searchTerm);
-  await page.keyboard.press("Enter");
+  await searchPage.search(searchTerm);
   // console.time("timeout");
   // await page.pause();
   // console.log("timeout");
